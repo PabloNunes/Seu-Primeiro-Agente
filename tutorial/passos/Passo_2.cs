@@ -1,0 +1,96 @@
+﻿// using Azure;
+// using Azure.AI.Agents.Persistent;
+// using Azure.Identity;
+// using Microsoft.Extensions.Configuration;
+
+
+// IConfigurationRoot configuration = new ConfigurationBuilder()
+//     .SetBasePath(AppContext.BaseDirectory)
+//     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+//     .Build();
+
+// var projectEndpoint = configuration["ProjectEndpoint"];
+// var modelDeploymentName = configuration["ModelDeploymentName"];
+
+// //Create a PersistentAgentsClient and PersistentAgent.
+// PersistentAgentsClient client = new(projectEndpoint, new DefaultAzureCredential());
+
+// //Create a new agent for AgentCon 2025 - São Paulo.
+// PersistentAgent agent = client.Administration.CreateAgent(
+//     model: modelDeploymentName,
+//     name: "AgentCon 2025 - São Paulo ",
+//     instructions: "You are a helpful agent for the AgentCon 2025 conference in São Paulo. Your task is to assist users with questions related to the conference, such as schedules, speakers, and events.",
+//     tools: null
+// );
+
+// //Create a thread to establish a session between Agent and a User.
+// PersistentAgentThread thread = client.Threads.CreateThread();
+
+// // Get a boolean to determine if the user wants to continue the conversation.
+// bool continueConversation = true;
+
+// Console.WriteLine("Bem-vindo ao AgentCon 2025 - São Paulo!");
+// Console.WriteLine("Você pode fazer perguntas sobre a programação do evento, palestrantes e muito mais.");
+// Console.WriteLine("Digite sua pergunta ou pressione Enter para sair.");
+
+// do
+// {
+//     // Make the user can continue to talk with the chatbot and send messages to the agent.
+//     Console.Write("Você: ");
+//     string userInput = Console.ReadLine();
+
+//     if (string.IsNullOrWhiteSpace(userInput))
+//     {
+//         continueConversation = false;
+//         break;
+//     }
+
+//     // Create a new message in the PersistentAgentThread with the user's input.
+//     client.Messages.CreateMessage(
+//         thread.Id,
+//         MessageRole.User,
+//         userInput);
+
+
+//     // Create a new run to process the user's message with the agent.
+//     ThreadRun run = client.Runs.CreateRun(
+//         thread.Id,
+//         agent.Id,
+//         additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em dotnet, com Pablo Lopes com uma duraçã de 75 minutos.");
+
+
+//     // Wait for the agent to respond.
+//     do
+//     {
+//         Thread.Sleep(TimeSpan.FromMilliseconds(500));
+//         run = client.Runs.GetRun(thread.Id, run.Id);
+//     } while (run.Status == RunStatus.Queued
+//         || run.Status == RunStatus.InProgress
+//         || run.Status == RunStatus.RequiresAction);
+
+
+//     //Get the messages in the PersistentAgentThread. Includes Agent (Assistant Role) and User (User Role) messages.
+//     Pageable<PersistentThreadMessage> messages = client.Messages.GetMessages(
+//         threadId: thread.Id,
+//         order: ListSortOrder.Ascending,
+//         limit: 1);
+
+//     // Display only the latest assistant response
+//     var latestAssistantMessage = messages.LastOrDefault(m => m.Role == "assistant");
+
+//     if (latestAssistantMessage != null)
+//     {
+//         foreach (MessageContent content in latestAssistantMessage.ContentItems)
+//         {
+//             if (content is MessageTextContent textContent)
+//             {
+//                 Console.WriteLine($"[Assistente] {textContent.Text}");
+//             }
+//         }
+//     }
+
+// } while (continueConversation);
+
+// //Clean up test resources.
+// client.Threads.DeleteThread(threadId: thread.Id);
+// client.Administration.DeleteAgent(agentId: agent.Id);

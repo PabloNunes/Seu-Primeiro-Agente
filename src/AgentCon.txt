@@ -1,0 +1,31 @@
+AgentCon - São Paulo - Saturday, 7 June 2025  8:45 AM - 6:00 PM BRT 
+
+Location
+FIAP - Aclimação
+Av. Lins de Vasconcelos
+1222 - Aclimação São Paulo
+Brazil
+Organized by: Global AI Sao Paulo
+
+Participe do AI Agents World Tour, uma série global de conferências de um dia, criada exclusivamente para desenvolvedores que estão construindo o futuro com agentes de IA.
+
+De São Francisco a Singapura, estamos reunindo engenheiros, pesquisadores e criadores de ponta para explorar o que há de mais avançado em design, implementação e integração de agentes de IA. Seja você responsável por assistentes inteligentes, sistemas autônomos ou ferramentas de próxima geração para desenvolvedores, este evento é seu atalho para conhecimento prático, demonstrações ao vivo e insights do mundo real.
+
+Saturday, June 7, 2025
+
+| Horário | Local | Sessão | Palestrante | Duração | Participantes |
+|---------|-------|--------|-------------|---------|---------------|
+| 8:45 am | AUDITÓRIO | Credenciamento | - | 30 min | 300 |
+| 9:15 am | AUDITÓRIO | Abertura e Boas Vindas | - | 15 min | 300 |
+| 9:30 am | AUDITÓRIO | Keynote Internacional: AI Agents | Henk Boelman | 45 min | 300 |
+| 10:15 am | AUDITÓRIO | Utilizando seus Dados em Bases Relacionais com IAs Generativas: um exemplo com Semantic Kernel | Renato Groffe | 45 min | 250 |
+| 10:30 am | SALA DE WORKSHOPS | Crie seu primeiro agente com o Azure AI Agent Service | Pablo Lopes | 75 min | 50 |
+| 11:00 am | AUDITÓRIO | Serverless GenAI: Criando agentes de IA com ADK, Gemini e Cloud Run | Simara Conceição | 45 min | 200 |
+| 11:45 am | AUDITÓRIO | Almoço oferecido pela Global AI Community | - | 75 min | 300 |
+| 1:00 pm | AUDITÓRIO | Como IA Está Democratizando a Tecnologia e Gerando Desafios e Oportunidades para Devs | Andrea Paiva, José Rodrigues | 45 min | 180 |
+| 1:45 pm | AUDITÓRIO | Multi-Agent Systems for Marketing at Scale | João Paulo Martins | 45 min | 150 |
+| 2:15 pm | SALA DE WORKSHOPS | Contribuindo com Open Source com a ajuda do GitHub Copilot (Agent Mode) | Pachi Parra | 45 min | 40 |
+| 2:30 pm | AUDITÓRIO | Da Coordenação à Execução: Orquestrando Agentes com MCP e A2A | Glaucio Daniel Santos | 45 min | 120 |
+| 3:15 pm | AUDITÓRIO | Governança, Riscos e Compliance de Segurança em IA | - | 45 min | 100 |
+| 4:00 pm | AUDITÓRIO | Intervalo de café | - | 20 min | 250 |
+| 4:20 pm | AUDITÓRIO | Além dos Chatbots: Boas Práticas com Copilot Studio | - | 45 min | 150 |
