@@ -74,7 +74,12 @@ Você será direcionado para a página de inscrição do Azure for Education. Vo
 
 Insira o código de convite fornecido durante o workshop da Agentcon São Paulo 2025. Após inserir o código, você será redirecionado para a página de educação, no qual você poderá ver o status dos seus créditos e recursos disponíveis. Qualquer coisa, notifique o palestrante caso tenha problemas.
 
-> Nota: Caso você esteja utilizando o GitHub Codespaces, você já terá que instalar o Azure CLI, que é necessário para acessar os recursos do Azure. Você pode verificar se o Azure CLI está instalado executando o comando `az --version` no terminal. Caso não esteja instalado, você pode seguir as instruções de instalação [aqui](https://docs.microsoft.com/cli/azure/install-azure-cli). Ou utilizar o comando: 
+> **Importante**: Você vai receber um e-mail para a entrada num tenant do Azure. Certifique-se de aceitar o convite para ter acesso aos recursos por esse tenant, ele requer MFA (Multi-Factor Authentication) para garantir a segurança da sua conta, favor tenha certeza de que você tem acesso ao seu celular ou outro método de autenticação configurado.
+
+
+## Configurando o Azure CLI
+
+ Caso você esteja utilizando o GitHub Codespaces, você já terá que instalar o Azure CLI, que é necessário para acessar os recursos do Azure. Você pode verificar se o Azure CLI está instalado executando o comando `az --version` no terminal. Caso não esteja instalado, você pode seguir as instruções de instalação [aqui](https://docs.microsoft.com/cli/azure/install-azure-cli). Ou utilizar o comando: 
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
