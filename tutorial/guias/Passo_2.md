@@ -139,6 +139,7 @@ using Azure;
 using Azure.AI.Agents.Persistent;
 using Azure.Identity;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 
 IConfigurationRoot configuration = new ConfigurationBuilder()
     .SetBasePath(AppContext.BaseDirectory)
@@ -214,16 +215,7 @@ client.Administration.DeleteAgent(agentId: agent.Id);
 
 ## Executando o Agente
 
-Agora, vamos executar nosso agente pela primeira vez! No terminal, execute o seguinte comando:
-
-```bash
-dotnet run
-```
-
-> **Aviso Importante**: Se você estiver com problemas no .json, verifique as instruções abaixo.
-
-
-Se você receber um erro relacionado ao arquivo `appsettings.json` não sendo encontrado, adicione as seguintes linhas ao seu arquivo `.csproj` dentro da seção `<ItemGroup>`:
+Você vai receber um erro relacionado ao arquivo `appsettings.json` não sendo encontrado, adicione as seguintes linhas ao seu arquivo `.csproj` dentro da seção `<ItemGroup>`:
 
 ```xml
 <None Update="appsettings.json">

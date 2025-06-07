@@ -50,6 +50,7 @@ Agora que temos o .NET funcionando, precisamos instalar algumas bibliotecas esse
 dotnet add package Azure.AI.Agents.Persistent
 dotnet add package Azure.Identity
 dotnet add package Microsoft.Extensions.Configuration
+dotnet add package Microsoft.Extensions.Configuration.Json
 ```
 
 Essas bibliotecas nos permitem, respectivamente, trabalhar com agentes persistentes no Azure, gerenciar autenticação e configurar nosso ambiente de desenvolvimento.
@@ -72,6 +73,11 @@ Você será direcionado para a página de inscrição do Azure for Education. Vo
 ![Tela de inscrição do Azure for Education](assets/InvitationCodeScreen.png)
 
 Insira o código de convite fornecido durante o workshop da Agentcon São Paulo 2025. Após inserir o código, você será redirecionado para a página de educação, no qual você poderá ver o status dos seus créditos e recursos disponíveis. Qualquer coisa, notifique o palestrante caso tenha problemas.
+
+> Nota: Caso você esteja utilizando o GitHub Codespaces, você já terá que instalar o Azure CLI, que é necessário para acessar os recursos do Azure. Você pode verificar se o Azure CLI está instalado executando o comando `az --version` no terminal. Caso não esteja instalado, você pode seguir as instruções de instalação [aqui](https://docs.microsoft.com/cli/azure/install-azure-cli). Ou utilizar o comando: 
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
 
 ## Criando Recursos no Foundry
 

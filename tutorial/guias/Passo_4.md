@@ -78,6 +78,19 @@ if (content is MessageImageFileContent imageFileContent)
 }
 ```
 
+> **Nota**: se você estiver utilizando o Codespaces, o comando `Process.Start` pode não funcionar como esperado, pois ele tenta abrir o arquivo no ambiente local. Nesse caso, você pode baixar o arquivo e abri-lo manualmente.
+```csharp
+if (content is MessageImageFileContent imageFileContent)
+{
+    Console.WriteLine($"[Assistente]: ID da imagem = {imageFileContent.FileId}");
+    BinaryData imageContent = client.Files.GetFileContent(imageFileContent.FileId);
+    string tempFilePath = Path.Combine(AppContext.BaseDirectory, $"{Guid.NewGuid()}.png");
+    File.WriteAllBytes(tempFilePath, imageContent.ToArray());
+    client.Files.DeleteFile(imageFileContent.FileId);
+    Console.WriteLine($"[Assistente]: A imagem foi salva em {tempFilePath}. Abra manualmente para visualizar.");
+}
+``` 
+
 > **Importante**: Se tiver problemas com o código, verifique no arquivo Passo_4.cs do repositório o código completo. Clique [aqui](../passos/Passo_4.cs) para ver o código completo.
 
 > **⚠️ Importante**: Quando temos um agente em produção, temos vários tipos que podemos retornar, como texto, imagens, vídeos, etc. Veja a implementação correta com Switch no programa Passo_5.md [aqui](../passos/Passo_5.md).

@@ -24,7 +24,7 @@ Isso vai dar conhecimento ao agente sobre o evento, permitindo que ele responda 
 
 ## Código Completo com RAG
 
-Substitua todo o conteúdo do arquivo `Program.cs` pelo seguinte código:
+Substitua parte do conteúdo do arquivo `Program.cs` pelo seguinte código:
 
 ```csharp
 (... entre a criação do cliente)
