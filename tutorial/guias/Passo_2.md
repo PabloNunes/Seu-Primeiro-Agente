@@ -125,7 +125,7 @@ Para logar no Azure, você precisa ter a CLI do Azure instalada. Se você ainda 
 Nisso, use sua CLI para logar no Azure:
 
 ```bash
-az login
+az login --tenant <TENANT_ID>
 ```
 
 > **Importante**: Substitua o `ProjectEndpoint` pelo endpoint do seu projeto criado no AI Foundry no Passo 1. Você pode encontrar essas informações na página do seu projeto no AI Foundry.

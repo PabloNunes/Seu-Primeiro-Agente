@@ -76,6 +76,8 @@ Insira o código de convite fornecido durante o workshop da Agentcon São Paulo 
 
 > **Importante**: Você vai receber um e-mail para a entrada num tenant do Azure. Certifique-se de aceitar o convite para ter acesso aos recursos por esse tenant, ele requer MFA (Multi-Factor Authentication) para garantir a segurança da sua conta, favor tenha certeza de que você tem acesso ao seu celular ou outro método de autenticação configurado.
 
+> *Muito importante*: Troque o tenant para o tenant do Azure for Education, caso você tenha criado uma conta do Azure antes de entrar no workshop. Você pode fazer isso clicando na sua foto de perfil no canto superior direito do portal do Azure e selecionando o tenant correto!
+
 
 ## Configurando o Azure CLI
 
@@ -97,9 +99,15 @@ Para acessar o Foundry, vá para o portal do Azure e procure por "AI Foundry". V
 Você verá uma tela como esta:
 ![Tela do AI Foundry](assets/HomepageAIFoundry.png)
 
+Antes de começarmos a criar nosso agente, precisamos configurar o ambiente no Foundry. Mude o ambiente fazendo o seguinte:
+1. Clique no ícone com seu nome no canto superior direito do portal do Azure.
+2. Selecione "Change environment" (Mudar ambiente) no menu suspenso.
+3. Escolha o ambiente "Global Ai" na lista de ambientes disponíveis.
+
+![Mudar ambiente do Foundry](assets/ChangeEnvironmentFoundry.png)
 Agora, precisamos criar alguns recursos no Foundry, como um projeto e configurar as credenciais necessárias para acessar os dados e ferramentas que usaremos no nosso agente.
 
-1. Acesse o portal do Foundry, clique em "Create new".
+1. Acesse o portal do Foundry, clique em "Create new". Caso você não veja essa opção, clique no botão, "Create new agent" no canto superior tela.
 
    ![Tela inicial do Foundry](assets/HomepageAIFoundry.png)
 
