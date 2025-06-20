@@ -156,7 +156,7 @@ Agora, precisamos criar alguns recursos no Foundry, como um projeto e configurar
 
     ![Tela de configuração do modelo](assets/ModelConfigFoundry.png)
 
-6. Depois, de criar você verá uma tela de resumo do modelo. Dados de acesso, como o endpoint e o nome do modelo, serão exibidos. Ignore esses pois usaremos o endpoint do Foundry que criamos anteriormente.
+6. Depois de criar, você verá uma tela de resumo do modelo. Dados de acesso, como o endpoint e o nome do modelo, serão exibidos. Ignore esses, pois usaremos o endpoint do Foundry que criamos anteriormente.
 
 7. Pronto! Agora você tem um modelo de linguagem natural configurado no Foundry. Você pode ver o modelo na lista de modelos e endpoints.
 

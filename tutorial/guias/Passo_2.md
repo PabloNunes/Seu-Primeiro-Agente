@@ -307,7 +307,7 @@ do
     ThreadRun run = client.Runs.CreateRun(
         thread.Id,
         agent.Id,
-        additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em dotnet, com Pablo Lopes com uma duraçã de 75 minutos.");
+        additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em .NET, com Pablo Lopes, com duração de 75 minutos.");
 
 
     // Wait for the agent to respond.
@@ -360,7 +360,7 @@ Agora, quando você executar o agente, ele permitirá que você faça perguntas 
 
 ## Próximos Passos
 
-Agora que temos um agente básico funcionando, vamos torná-lo mais inteligente! No próximo passo, vamos adicionar as informações que  agente precisa para que nosso agente compreenda melhor as perguntas e forneça respostas mais precisas.
+Agora que temos um agente básico funcionando, vamos torná-lo mais inteligente! No próximo passo, vamos adicionar as informações que o agente precisa para compreender melhor as perguntas e fornecer respostas mais precisas.
 
 Veja o próximo passo [aqui](Passo_3.md).
 

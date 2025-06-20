@@ -170,8 +170,8 @@ O Code Interpreter suporta diversos formatos de arquivo para análise e processa
 | .zip | application/zip |
 
 O agente agora pode:
-- Executar códigos para análise
-- Gerar gráficos usando vários tipos de visualizações.
+- Executar código para análise
+- Gerar gráficos usando vários tipos de visualizações
 - Salvar e exibir imagens automaticamente
 
 ## Resumo das Melhorias
@@ -184,6 +184,6 @@ O agente agora pode:
 
 ## Próximos Passos
 
-Por esse workshop, você aprendeu a adicionar ferramentas de código ao seu agente, permitindo que ele execute scripts Python e gere visualizações automaticamente. Para melhorar ainda mais, você pode explorar a integração com Ferramentas próprias e funções de agentes, verifique como fazer isso nas samples nas nossas [samples .NET](https://github.com/azure-ai-foundry/foundry-samples/tree/main/samples/microsoft/csharp/getting-started-agents).
+Neste workshop, você aprendeu a adicionar ferramentas de código ao seu agente, permitindo que ele execute scripts Python e gere visualizações automaticamente. Para melhorar ainda mais, você pode explorar a integração com ferramentas próprias e funções de agentes. Verifique como fazer isso nas nossas [amostras .NET](https://github.com/azure-ai-foundry/foundry-samples/tree/main/samples/microsoft/csharp/getting-started-agents).
 
-**Checkpoint**: Certifique-se de que seu agente consegue gerar e exibir gráficos automaticamente antes de prosseguir para o próximo passo.
+**Checkpoint**: Certifique-se de que seu agente consegue gerar e exibir gráficos automaticamente antes de prosseguir para projetos mais avançados.
