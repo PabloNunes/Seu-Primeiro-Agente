@@ -1,6 +1,6 @@
 # Passo 2: Criando seu Primeiro Agente Inteligente
 
-Está na hora de criar nosso primeiro agente inteligente! 
+Agora é hora de criar nosso primeiro agente inteligente! 
 
 Neste passo, vamos configurar o ambiente, criar um agente e fazer com que ele responda a perguntas sobre a AgentCon 2025.
 
@@ -8,9 +8,9 @@ Neste passo, vamos configurar o ambiente, criar um agente e fazer com que ele re
 
 ### Criando o Agente
 
-No nosso código, vamos utilizar o `PersistentAgentsClient` para interagir com o Azure AI Foundry. Este cliente nos permitirá criar agentes que podem manter o estado entre as interações.
+No nosso código, vamos usar o `PersistentAgentsClient` para interagir com o Azure AI Foundry. Este cliente nos permitirá criar agentes que podem manter o estado entre as interações.
 
-Primeiramente, vamos entender o commando:
+Primeiro, vamos entender o comando:
 
 ```csharp
 PersistentAgent agent = client.Administration.CreateAgent(
@@ -25,13 +25,13 @@ Aqui, estamos criando um agente chamado "AgentCon 2025 - São Paulo" que tem com
 
 Você pode ver que ele está sem ferramentas (tools) por enquanto, mas vamos adicionar isso mais tarde.
 
-Note, também, que vamos pegar do nosso arquivo `appsettings.json` o endpoint do projeto e o nome do modelo que vamos utilizar.
+Observe também que vamos pegar do nosso arquivo `appsettings.json` o endpoint do projeto e o nome do modelo que vamos usar.
 
-Por ultimo, as instruções de mensagem de sistema são definidas para guiar o agente em suas respostas. Neste caso, estamos instruindo o agente a fornecer informações sobre a conferência AgentCon 2025.
+Por último, as instruções de mensagem de sistema são definidas para guiar o agente em suas respostas. Neste caso, estamos instruindo o agente a fornecer informações sobre a conferência AgentCon 2025.
 
 ### Criando o Thread
 
-Para criar um thread, vamos utilizar o método `CreateThread` do cliente `PersistentAgentsClient`. Isso nos permitirá estabelecer uma sessão entre o agente e um usuário.
+Para criar um thread, vamos usar o método `CreateThread` do cliente `PersistentAgentsClient`. Isso nos permitirá estabelecer uma sessão entre o agente e um usuário.
 
 ```csharp
 PersistentAgentThread thread = client.Threads.CreateThread();
@@ -49,22 +49,22 @@ client.Messages.CreateMessage(
     MessageRole.User,
     "Olá, qual é a programação do AgentCon 2025 em São Paulo?");
 ```
-Neste exemplo, estamos enviando uma pergunta ao agente sobre a programação da AgentCon 2025. O `MessageRole.User` indica que esta mensagem é do usuário, na qual vamos buscar a completude da resposta do agente.
+Neste exemplo, estamos enviando uma pergunta ao agente sobre a programação da AgentCon 2025. O `MessageRole.User` indica que esta mensagem é do usuário, e vamos aguardar a resposta completa do agente.
 
 ### Processando a Resposta do Agente
 
-Para processar a resposta do agente, vamos utilizar o método `CreateRun` do cliente `PersistentAgentsClient`. Isso iniciará o processamento da mensagem pelo agente:
+Para processar a resposta do agente, vamos usar o método `CreateRun` do cliente `PersistentAgentsClient`. Isso iniciará o processamento da mensagem pelo agente:
 
 ```csharp
 ThreadRun run = client.Runs.CreateRun(
     thread.Id,
     agent.Id,
-    additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em dotnet, com Pablo Lopes com uma duraçã de 75 minutos.");
+    additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em .NET, com Pablo Lopes, com duração de 75 minutos.");
 ```
 
 Aqui, estamos iniciando um run para o thread criado, passando o ID do agente e algumas instruções adicionais. Essas instruções ajudam o agente a entender melhor o contexto da pergunta e fornecer uma resposta mais precisa.
 
-Depois, vamos utilizar um loop para verificar o status do run até que ele seja concluído:
+Depois, vamos usar um loop para verificar o status do run até que ele seja concluído:
 
 ```csharp
 do
@@ -90,7 +90,7 @@ while (run.Status == RunStatus.Queued
     || run.Status == RunStatus.RequiresAction);
 ```
 
-Este loop irá aguardar até que o run seja concluído, verificando periodicamente o status do run. Quando o run estiver concluído, podemos obter as mensagens do thread e exibi-las no console, confirmando que o agente vai receber o tipo de mensagem textual.
+Este loop irá aguardar até que o run seja concluído, verificando periodicamente o status do run. Quando o run estiver concluído, podemos obter as mensagens do thread e exibi-las no console, confirmando que o agente recebeu a mensagem de texto.
 
 
 ```csharp
@@ -118,11 +118,11 @@ No diretório raiz do seu projeto `MeuPrimeiroAgente`, crie um arquivo chamado `
 
 ### Login no Azure AI Foundry
 
-Usamos nossas credenciais do Azure para autenticar e acessar o AI Foundry. Para isso, vamos utilizar a biblioteca `Azure.Identity` que já adicionamos anteriormente. Note que usamos o `DefaultAzureCredential`, que tentará autenticar usando várias abordagens, como variáveis de ambiente, Managed Identity, entre outras.
+Usamos nossas credenciais do Azure para autenticar e acessar o AI Foundry. Para isso, vamos usar a biblioteca `Azure.Identity` que já adicionamos anteriormente. Observe que usamos o `DefaultAzureCredential`, que tentará autenticar usando várias abordagens, como variáveis de ambiente, Managed Identity, entre outras.
 
-Para logar no Azure, você precisa ter a CLI do Azure instalada. Se você ainda não tem, pode instalar seguindo as instruções [aqui](https://docs.microsoft.com/cli/azure/install-azure-cli).
+Para fazer login no Azure, você precisa ter a CLI do Azure instalada. Se você ainda não tem, pode instalar seguindo as instruções [aqui](https://docs.microsoft.com/cli/azure/install-azure-cli).
 
-Nisso, use sua CLI para logar no Azure:
+Em seguida, use a CLI para fazer login no Azure:
 
 ```bash
 az login --tenant <TENANT_ID>
@@ -307,7 +307,7 @@ do
     ThreadRun run = client.Runs.CreateRun(
         thread.Id,
         agent.Id,
-        additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em dotnet, com Pablo Lopes com uma duraçã de 75 minutos.");
+        additionalInstructions: "Nossa programação inclui palestras, painéis e workshops sobre IA e tecnologia. Inclusive, teremos uma sessão especial sobre como usar agentes em .NET, com Pablo Lopes, com duração de 75 minutos.");
 
 
     // Wait for the agent to respond.
@@ -360,7 +360,7 @@ Agora, quando você executar o agente, ele permitirá que você faça perguntas 
 
 ## Próximos Passos
 
-Agora que temos um agente básico funcionando, vamos torná-lo mais inteligente! No próximo passo, vamos adicionar as informações que  agente precisa para que nosso agente compreenda melhor as perguntas e forneça respostas mais precisas.
+Agora que temos um agente básico funcionando, vamos torná-lo mais inteligente! No próximo passo, vamos adicionar as informações que o agente precisa para compreender melhor as perguntas e fornecer respostas mais precisas.
 
 Veja o próximo passo [aqui](Passo_3.md).
 

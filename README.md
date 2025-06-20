@@ -7,7 +7,7 @@
 
 > **Bem-vindo à sua jornada para se tornar um especialista em agentes inteligentes!** 🚀
 
-Este repositório contém um tutorial completo e prático criado especialmente para a **AgentCon São Paulo 2025**, onde você aprenderá a construir agentes inteligentes do zero usando **.NET** e **Azure AI Foundry**.
+Este repositório contém um tutorial completo e prático criado especialmente para a **AgentCon São Paulo 2025**. Aqui você aprenderá a construir agentes inteligentes do zero usando **.NET** e **Azure AI Foundry**.
 
 
 [Começar Tutorial](tutorial/guias/Passo_1.md) | [Documentação](https://docs.microsoft.com/azure/ai/) | [Contribuir](#como-contribuir)
@@ -27,9 +27,9 @@ Ao final deste tutorial, você terá criado um **agente inteligente completo** c
 
 ### 🎯 Passo 1: Configurando o Ambiente
 - Instalação do .NET SDK
-- Configuração do Azure AI Foundry  
-- Setup inicial do projeto
-- Primeiros passos com bibliotecas Azure
+- Configuração do Azure AI Foundry
+- Configuração inicial do projeto
+- Primeiros passos com as bibliotecas do Azure
 
 ### 🤖 Passo 2: Criando seu Primeiro Agente
 - Agente básico com resposta simples
@@ -49,12 +49,12 @@ Ao final deste tutorial, você terá criado um **agente inteligente completo** c
 - Processamento automático de imagens
 - Análises de dados complexas
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
 ### Pré-requisitos
 
 - **.NET 9.0 SDK** ou superior
-- **Conta Azure** com acesso ao AI Foundry
+- **Conta do Azure** com acesso ao AI Foundry
 - **Visual Studio Code** ou Visual Studio
 - **Conhecimento básico de C#**
 
@@ -94,12 +94,12 @@ Seu-Primeiro-Agente/
 
 ## 🤝 Como Contribuir
 
-Adoraríamos sua contribuição para melhorar este tutorial!
+Adoraríamos receber sua contribuição para melhorar este tutorial!
 
 1. **Fork** o projeto
-2. Crie uma **branch** para sua feature (`git checkout -b feature/MinhaFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. **Push** para a branch (`git push origin feature/MinhaFeature`)
+2. Crie uma **branch** para sua funcionalidade (`git checkout -b feature/MinhaFeature`)
+3. **Faça commit** das suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
+4. **Envie** para a branch (`git push origin feature/MinhaFeature`)
 5. Abra um **Pull Request**
 
 ## 📞 Comunidade
