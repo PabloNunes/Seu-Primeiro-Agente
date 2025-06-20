@@ -12,11 +12,11 @@ RAG permite que o agente acesse informações atualizadas e relevantes, melhoran
 
 Primeiro, certifique-se de que o arquivo `AgentCon.txt` está no diretório do seu projeto. Este arquivo contém toda a programação da AgentCon 2025.
 
-No arquivo, temos informações como horários, palestrantes e sessões do evento. O agente usará esses dados para responder perguntas específicas. Por exemplo, ele informa sobre horários de palestras, nomes de palestrantes e detalhes das sessões.
+No arquivo, temos informações como horários, palestrantes e sessões do evento. O agente usará esses dados para responder perguntas específicas. Por exemplo, ele pode informar sobre horários de palestras, nomes de palestrantes e detalhes das sessões.
 
-Isso vai dar conhecimento ao agente sobre o evento, permitindo que ele responda perguntas como:
-- "Que vai rolar às 2h da tarde?"
-- "Qual evento que pode me ajudar com escala de agentes?"
+Isso dará conhecimento ao agente sobre o evento, permitindo que ele responda perguntas como:
+- "O que vai acontecer às 2h da tarde?"
+- "Qual evento pode me ajudar com escala de agentes?"
 - "Quem é o palestrante da keynote?"
 
 
@@ -64,7 +64,7 @@ PersistentAgent agent = client.Administration.CreateAgent(
 (... da criação do persistent thread)
 ```
 
-Também, adcione o seguinte código para criar limpar nosso vector store e arquivos após o teste:
+Também adicione o seguinte código para limpar nosso vector store e arquivos após o teste:
 
 ```csharp
 (.. na parte final do código, após a execução do agente)
@@ -78,7 +78,7 @@ client.Administration.DeleteAgent(agentId: agent.Id);
 
 > **Importante**: Se tiver problemas com o código, verifique no arquivo Passo_3.cs do repositório o código completo. Clique [aqui](../passos/Passo_3.cs) para ver o código completo.
 
-## Executando o Agente com nossa busca vetorial
+## Executando o Agente com nossa Busca Vetorial
 
 Execute o comando:
 
@@ -92,12 +92,12 @@ dotnet run
 
 Agora teste as perguntas específicas:
 
-### **Pergunta 1: "Que vai rolar às 2h da tarde?"**
+### **Pergunta 1: "O que vai acontecer às 2h da tarde?"**
 O agente deve responder com informações específicas sobre as sessões das 14h:
 - **2:15 pm**: Contribuindo com Open Source com GitHub Copilot (Agent Mode) - Pachi Parra
 - **2:30 pm**: Da Coordenação à Execução: Orquestrando Agentes com MCP e A2A - Glaucio Daniel Santos
 
-### **Pergunta 2: "Qual evento que pode me ajudar com escala de agentes?"**
+### **Pergunta 2: "Qual evento pode me ajudar com escala de agentes?"**
 O agente deve identificar:
 - **1:45 pm**: Multi-Agent Systems for Marketing at Scale - João Paulo Martins
 
@@ -107,7 +107,7 @@ O agente deve identificar:
 - "Qual a duração do workshop do Pablo Lopes?"
 - "Quantas pessoas participam da sessão sobre Serverless GenAI?"
 
-## Como Funciona o nossa busca vetorial
+## Como Funciona Nossa Busca Vetorial
 
 Nosso agente agora está equipado com RAG, o que significa que ele pode buscar informações específicas no Vector Store. Aqui está como isso funciona:
 
@@ -118,7 +118,7 @@ PersistentAgentFileInfo uploadedAgentFile = client.Files.UploadFile(
     purpose: PersistentAgentFilePurpose.Agents
 );
 ```
-O arquivo é enviado para o Azure AI Foundry. No qual, ele é processado e criado uma representação vetorial para busca, essa representação pode ser vista como um índice de informações contidas no arquivo, nas quais podemos tentar buscar informações específicas, através de uma busca por comparação de informações, pelo que chamamos de busca semântica (Cosine Similarity Search).
+O arquivo é enviado para o Azure AI Foundry, onde é processado e criada uma representação vetorial para busca. Essa representação pode ser vista como um índice das informações contidas no arquivo, permitindo buscar informações específicas através de busca semântica (Cosine Similarity Search).
 
 ### **2. Vector Store** 
 ```csharp
@@ -126,20 +126,19 @@ PersistentAgentsVectorStore vectorStore = client.VectorStores.CreateVectorStore(
     fileIds: new List<string> { uploadedAgentFile.Id },
     name: "my_vector_store");
 ```
-O conteúdo é processado e indexado para busca semântica. Aqui criamos um Vector Store que armazena os dados do arquivo `AgentCon.txt`. Esse Vector Store permite que o agente busque informações específicas de forma eficiente.
-Usando o nosso dicionário de IDs de arquivos, o agente pode acessar rapidamente os dados relevantes.
+O conteúdo é processado e indexado para busca semântica. Aqui criamos um Vector Store que armazena os dados do arquivo `AgentCon.txt`. Esse Vector Store permite que o agente busque informações específicas de forma eficiente. Usando nosso dicionário de IDs de arquivos, o agente pode acessar rapidamente os dados relevantes.
 
 ### **3. Ferramenta de Busca**
 ```csharp
 tools: new List<ToolDefinition> { new FileSearchToolDefinition() }
 ```
-O agente ganha a capacidade de buscar informações nos dados. Aqui, definimos uma ferramenta de busca que permite ao agente acessar o Vector Store e procurar informações relevantes, isso é relevante, pois é a primeira ferramenta que o agente tem acesso, realmente deixando ele ser automato e cumprindo a definição de agente.
+O agente ganha a capacidade de buscar informações nos dados. Aqui, definimos uma ferramenta de busca que permite ao agente acessar o Vector Store e procurar informações relevantes. Isso é importante, pois é a primeira ferramenta que o agente tem acesso, realmente deixando ele autônomo e cumprindo a definição de agente.
 
 ### **4. Processamento** 
 Quando você faz uma pergunta, o agente:
-1. Busca informações relevantes no Vector Store, no nosso AI Foundry, onde ele armazena os dados do evento e consegue buscar ao precisar ser requisitado pelo agente.
+1. Busca informações relevantes no Vector Store, no nosso AI Foundry, onde ele armazena os dados do evento e consegue buscar quando solicitado.
 2. Usa essas informações para complementar sua resposta, fornecendo contexto e detalhes adicionais, além de citações.
-3. Fornece respostas precisas baseadas nos dados reais, ao notar que precisa buscar informações específicas, ele utiliza a ferramenta de busca para encontrar as respostas corretas.
+3. Fornece respostas precisas baseadas nos dados reais. Quando nota que precisa buscar informações específicas, ele usa a ferramenta de busca para encontrar as respostas corretas.
 
 ## Resumo das Melhorias
 

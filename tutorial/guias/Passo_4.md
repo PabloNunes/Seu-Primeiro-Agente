@@ -4,7 +4,7 @@ Agora vamos adicionar uma funcionalidade poderosa ao nosso agente: a capacidade 
 
 ## O que é Code Interpreter?
 
-Code Interpreter é uma ferramenta que permite ao agente executar código Python em um ambiente sandboxed (isolado). Isso significa que o agente pode com independência gerar gráficos, processar dados e criar visualizações sem precisar de um ambiente externo.
+Code Interpreter é uma ferramenta que permite ao agente executar código Python em um ambiente isolado (sandboxed). Isso significa que o agente pode gerar gráficos, processar dados e criar visualizações de forma independente, sem precisar de um ambiente externo.
 
 Por exemplo, o agente pode:
 - Processar dados
@@ -14,13 +14,13 @@ Por exemplo, o agente pode:
 
 ## Como Funciona?
 
-Quando o agente recebe uma pergunta que requer uma análise mais profunda, a criação + execução de código ou a geração de gráficos, ele faz a chamada para a ferramenta Code Interpreter, caso disponível. O agente pode então gerar um script Python, executá-lo, e, se preciso, retornar uma imagem ou gráfico como resposta.
+Quando o agente recebe uma pergunta que requer uma análise mais profunda, a criação e execução de código ou a geração de gráficos, ele faz a chamada para a ferramenta Code Interpreter, se disponível. O agente pode então gerar um script Python, executá-lo e, se necessário, retornar uma imagem ou gráfico como resposta.
 
-Note que ferramentas, podem colaborar entre si. Por exemplo, o agente pode usar a ferramenta de busca para encontrar dados relevantes e, em seguida, usar o Code Interpreter para gerar um gráfico com esses dados.
+Observe que as ferramentas podem colaborar entre si. Por exemplo, o agente pode usar a ferramenta de busca para encontrar dados relevantes e, em seguida, usar o Code Interpreter para gerar um gráfico com esses dados.
 
-Vamos ver um exemplo de como o agente nota a necessidade e ativar várias ferramentas:
+Vamos ver um exemplo de como o agente identifica a necessidade e ativa várias ferramentas:
 
-Agente é requestionado sobre a programação do evento e pede um infográfico, então ele usa a ferramenta de busca para encontrar os dados relevantes e, em seguida, usa o Code Interpreter para gerar o gráfico.
+O agente é questionado sobre a programação do evento e um infográfico é solicitado. Então ele usa a ferramenta de busca para encontrar os dados relevantes e, em seguida, usa o Code Interpreter para gerar o gráfico.
 
 > **Nota**: O Code Interpreter é uma ferramenta avançada e tem mais custos associados, além dos tokens consumidos, então use com sabedoria!
 
@@ -47,16 +47,16 @@ PersistentAgent agent = client.Administration.CreateAgent(
 
 ```
 
-Note que agora estamos adicionando a `CodeInterpreterToolDefinition` junto com a `FileSearchToolDefinition`. Isso permite que o agente busque informações e execute código Python.
+Observe que agora estamos adicionando a `CodeInterpreterToolDefinition` junto com a `FileSearchToolDefinition`. Isso permite que o agente busque informações e execute código Python.
 
 
-### **Passo 3: Atualizando nosso processamento de informação**
+### **Passo 3: Atualizando Nosso Processamento de Informação**
 
 Agora, vamos atualizar o código para que o agente possa gerar gráficos e infográficos com base nos dados da AgentCon.
 
-Vamos atualizar o nosso código para incluir a geração de gráficos e infográficos. Agora, podemos gerar visualizações automaticamente. Note, que estamos utilizando o `System.Diagnostics` para abrir os gráficos gerados, salvando os arquivos e abrindo-os.
+Vamos atualizar nosso código para incluir a geração de gráficos e infográficos. Agora, podemos gerar visualizações automaticamente. Observe que estamos usando o `System.Diagnostics` para abrir os gráficos gerados, salvando os arquivos e abrindo-os.
 
-Esse código deve ser adicionado após o processamento da resposta que vem só texto, no caso o `MessageTextContent`:
+Esse código deve ser adicionado após o processamento da resposta que contém apenas texto, no caso o `MessageTextContent`:
 
 ```csharp
 
@@ -135,7 +135,7 @@ O agente deve:
 
 ## Como Funciona o Code Interpreter
 
-Um fato muito relevante é pelo fato de o Code Interpreter ser uma ferramenta que executa códigos e ser sandboxed, o agente pode gerar e executar códigos Python de forma segura. 
+Um fato muito relevante é que o Code Interpreter é uma ferramenta que executa código em um ambiente isolado (sandboxed), permitindo que o agente gere e execute código Python de forma segura. 
 
 O Code Interpreter suporta diversos formatos de arquivo para análise e processamento:
 
