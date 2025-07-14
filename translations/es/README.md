@@ -2,14 +2,14 @@
 
 [![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/)
 [![Azure AI](https://img.shields.io/badge/Azure%20AI-Foundry-orange.svg)](https://ai.azure.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
 [![AgentCon 2025](https://img.shields.io/badge/AgentCon-S%C3%A3o%20Paulo%202025-green.svg)](https://globalai.community/chapters/sao-paulo/events/agentcon-2025-sao-paulo/)
 
 > **¡Bienvenido a tu viaje para convertirte en un experto en agentes inteligentes!** 🚀
 
 Este repositorio contiene un tutorial completo y práctico creado especialmente para la **AgentCon São Paulo 2025**, donde aprenderás a construir agentes inteligentes desde cero usando **.NET** y **Azure AI Foundry**.
 
-[Comenzar Tutorial](../tutorial/guias/Passo_1.md) | [Documentación](https://docs.microsoft.com/azure/ai/) | [Contribuir](#como-contribuir)
+[Comenzar Tutorial](../../tutorial/guias/Passo_1.md) | [Documentación](https://docs.microsoft.com/azure/ai/) | [Contribuir](#como-contribuir)
 
 ## 🎯 ¿Qué vas a aprender?
 
@@ -105,7 +105,7 @@ Seu-Primeiro-Agente/
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la **Licencia MIT** - consulta el archivo [LICENSE](../LICENSE) para más detalles.
+Este proyecto está licenciado bajo la **Licencia MIT** - consulta el archivo [LICENSE](../../LICENSE) para más detalles.
 
 ## 🌟 Agradecimientos
 
@@ -122,5 +122,5 @@ Este proyecto está licenciado bajo la **Licencia MIT** - consulta el archivo [L
 
 **Hecho con ❤️ para la comunidad de desarrolladores brasileños**
 
-[🚀 Comenzar Tutorial](../tutorial/guias/Passo_1.md) | [📖 Documentación](https://docs.microsoft.com/azure/ai/)
+[🚀 Comenzar Tutorial](../../tutorial/guias/Passo_1.md) | [📖 Documentación](https://docs.microsoft.com/azure/ai/)
 </div>
