@@ -69,7 +69,7 @@ Se te pedirá iniciar sesión en tu cuenta de Azure. Usa la cuenta que creaste a
 
 Serás dirigido a la página de registro de Azure for Education. Verás una pantalla como esta:
 
-![Pantalla de registro de Azure for Education](../assets/InvitationCodeScreen.png)
+![Pantalla de registro de Azure for Education](../../../tutorial/guias/assets/InvitationCodeScreen.png)
 
 Ingresa el código de invitación proporcionado durante el workshop de AgentCon São Paulo 2025. Tras ingresar el código, serás redirigido a la página de educación, donde podrás ver el estado de tus créditos y recursos disponibles. Si tienes algún problema, avisa al ponente.
 
@@ -90,44 +90,44 @@ Con tu cuenta de Azure configurada, vamos a crear los recursos necesarios en AI 
 
 Allí encontrarás herramientas para crear, entrenar e implementar agentes inteligentes, además de acceder a datos, modelos preentrenados, evaluar modelos y hacer pruebas antes de desplegar tus productos con IA.
 
-![AI Foundry](../assets/AzureAiFoundry.png)
+![AI Foundry](../../../tutorial/guias/assets/AzureAiFoundry.png)
 
 Para acceder a Foundry, ve al portal de Azure y busca "AI Foundry". También puedes acceder directamente: [AI Foundry](https://ai.azure.com).
 
 Verás una pantalla como esta:
-![Pantalla de AI Foundry](../assets/HomepageAIFoundry.png)
+![Pantalla de AI Foundry](../../../tutorial/guias/assets/HomepageAIFoundry.png)
 
 Antes de crear nuestro agente, necesitamos configurar el entorno en Foundry. Cambia el entorno así:
 1. Haz clic en el icono de tu nombre en la esquina superior derecha del portal de Azure.
 2. Selecciona "Change environment" en el menú desplegable.
 3. Elige el entorno "Global Ai" de la lista de entornos disponibles.
 
-![Cambiar entorno de Foundry](../assets/ChangeEnvironmentFoundry.png)
+![Cambiar entorno de Foundry](../../../tutorial/guias/assets/ChangeEnvironmentFoundry.png)
 Ahora, necesitamos crear algunos recursos en Foundry, como un proyecto y configurar las credenciales necesarias para acceder a los datos y herramientas que usaremos en nuestro agente.
 
 1. Accede al portal de Foundry, haz clic en "Create new". Si no ves esta opción, haz clic en el botón "Create new agent" en la parte superior de la pantalla.
 
-   ![Pantalla principal de Foundry](../assets/HomepageAIFoundry.png)
+   ![Pantalla principal de Foundry](../../../tutorial/guias/assets/HomepageAIFoundry.png)
 
    Aparecerá una pantalla como esta, deja la opción "Azure Ai Foundry Resource" seleccionada y haz clic en "Next":
 
-   ![Foundry Create New](../assets/CreateProjectFoundry.png)
+   ![Foundry Create New](../../../tutorial/guias/assets/CreateProjectFoundry.png)
 
 2. Crea un nuevo proyecto, ponle un nombre y un grupo de recursos si lo deseas, en las opciones avanzadas. Recomiendo usar el nombre largo que Foundry te da, como "pablonunes-1523". Haz clic en "Create".
 
-   ![Creando nuevo proyecto](../assets/CreateProjectConfig.png)
+   ![Creando nuevo proyecto](../../../tutorial/guias/assets/CreateProjectConfig.png)
 
    > **Consejo**: El nombre en Foundry debe ser único globalmente, así que elige un nombre que no esté en uso. Puedes añadir números o letras extra para asegurarlo.
 
     Verás la pantalla de espera mientras Foundry crea el proyecto:
 
-    ![Pantalla de espera de Foundry](../assets/CreatingProjectFoundry.png)
+    ![Pantalla de espera de Foundry](../../../tutorial/guias/assets/CreatingProjectFoundry.png)
 
    > **Importante**: Foundry puede tardar unos minutos en crear el proyecto. Ten paciencia y espera hasta que esté listo.
 
 3. Verifica que el proyecto se haya creado correctamente. Verás una pantalla como esta:
 
-    ![Pantalla de proyecto creado](../assets/ProjectCreatedFoundry.png)
+    ![Pantalla de proyecto creado](../../../tutorial/guias/assets/ProjectCreatedFoundry.png)
     
     Ahora tienes un proyecto en Foundry donde podrás crear y gestionar tus agentes inteligentes.
 
@@ -135,25 +135,25 @@ Ahora, necesitamos crear algunos recursos en Foundry, como un proyecto y configu
 
 4. Ahora, necesitamos crear el Modelo de Lenguaje Natural que usaremos en nuestro agente. Haz clic en "Models and Endpoints" en el menú lateral izquierdo. Verás una pantalla como esta:
 
-   ![Creando nuevo modelo](../assets/CreateModelFoundry.png)
+   ![Creando nuevo modelo](../../../tutorial/guias/assets/CreateModelFoundry.png)
 
     Luego, haz clic en "Deploy Model" y después en "Deploy Base Model".
 
-   ![Pantalla de modelos y endpoints](../assets/BaseModelFoundry.png)
+   ![Pantalla de modelos y endpoints](../../../tutorial/guias/assets/BaseModelFoundry.png)
 
 5. Elige el modelo "gpt-4o-mini" y haz clic en "Next". Verás una pantalla como esta:
 
-    ![Pantalla de selección de modelo](../assets/SelectModelFoundry.png)
+    ![Pantalla de selección de modelo](../../../tutorial/guias/assets/SelectModelFoundry.png)
 
     Después, verás una pantalla de configuración del modelo. Deja las opciones por defecto y haz clic en "Next".
 
-    ![Pantalla de configuración de modelo](../assets/ModelConfigFoundry.png)
+    ![Pantalla de configuración de modelo](../../../tutorial/guias/assets/ModelConfigFoundry.png)
 
 6. Tras crear, verás una pantalla de resumen del modelo. Se mostrarán datos de acceso como el endpoint y el nombre del modelo. Ignora estos, ya que usaremos el endpoint de Foundry que creamos antes.
 
 7. ¡Listo! Ahora tienes un modelo de lenguaje natural configurado en Foundry. Puedes ver el modelo en la lista de modelos y endpoints.
 
-    ![Pantalla de modelos y endpoints](../assets/ModelEndpointFoundry.png)
+    ![Pantalla de modelos y endpoints](../../../tutorial/guias/assets/ModelEndpointFoundry.png)
 
 ## Próximos Pasos
 

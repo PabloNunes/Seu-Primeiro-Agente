@@ -2,14 +2,14 @@
 
 [![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/)
 [![Azure AI](https://img.shields.io/badge/Azure%20AI-Foundry-orange.svg)](https://ai.azure.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
 [![AgentCon 2025](https://img.shields.io/badge/AgentCon-S%C3%A3o%20Paulo%202025-green.svg)](https://globalai.community/chapters/sao-paulo/events/agentcon-2025-sao-paulo/)
 
 > **Welcome to your journey to become an intelligent agent expert!** 🚀
 
 This repository contains a complete and practical tutorial created especially for **AgentCon São Paulo 2025**, where you will learn to build intelligent agents from scratch using **.NET** and **Azure AI Foundry**.
 
-[Start Tutorial](../tutorial/guias/Passo_1.md) | [Documentation](https://docs.microsoft.com/azure/ai/) | [Contribute](#how-to-contribute)
+[Start Tutorial](../../tutorial/guias/Passo_1.md) | [Documentation](https://docs.microsoft.com/azure/ai/) | [Contribute](#how-to-contribute)
 
 ## 🎯 What will you learn?
 
@@ -105,7 +105,7 @@ We would love your contribution to improve this tutorial!
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../LICENSE) file for details.
 
 ## 🌟 Acknowledgments
 
@@ -122,5 +122,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](../LICENS
 
 **Made with ❤️ for the Brazilian developer community**
 
-[🚀 Start Tutorial](../tutorial/guias/Passo_1.md) | [📖 Documentation](https://docs.microsoft.com/azure/ai/)
+[🚀 Start Tutorial](../../tutorial/guias/Passo_1.md) | [📖 Documentation](https://docs.microsoft.com/azure/ai/)
 </div>
